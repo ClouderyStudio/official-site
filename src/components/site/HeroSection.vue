@@ -56,7 +56,7 @@ onBeforeUnmount(() => {
     </div>
 
     <div class="hero__content md-container">
-      <img class="hero__logo" :src="heroLogo" alt="云术工作室" width="360" height="128" />
+      <img class="hero__logo" :src="heroLogo" alt="云术工作室" width="1000" height="366" />
 
       <h1 id="hero-title" class="hero__tagline md-typescale-headline-small">
         {{ studioInfo.tagline }}

@@ -98,8 +98,8 @@ export interface NavLink {
   href: string
 }
 
-export const heroImage = 'https://oss.cldery.com/mcweb/assets/images/12.png'
-export const heroLogo = 'https://oss.cldery.com/web/site/logo.png'
+export const heroImage = '/images/hero-banner.webp'
+export const heroLogo = '/images/logo.webp'
 export const contactEmail = 'admin@cldery.com'
 export const githubOrg = 'https://github.com/ClouderyStudio'
 export const qqGroup = 'https://qm.qq.com/q/Fg3aqm6ccW'
@@ -349,28 +349,28 @@ export const partners: Partner[] = [
   {
     id: 1,
     name: 'PXF我的世界服务器',
-    logo: 'https://oss.cldery.com/web/site/partners/pxfmc.png',
+    logo: '/images/partners/pxfmc.png',
     icon: IconEco,
     website: 'https://pxfmc.top',
   },
   {
     id: 2,
     name: '云创联跃团队',
-    logo: 'https://oss.cldery.com/web/site/partners/ycly.webp',
+    logo: '/images/partners/ycly.webp',
     icon: IconCloud,
     website: 'https://ycly.net',
   },
   {
     id: 3,
     name: '辽阔DNS',
-    logo: 'https://oss.cldery.com/web/site/partners/lkdns.ico',
+    logo: '/images/partners/lkdns.ico',
     icon: IconPublic,
     website: 'https://lkdns.org',
   },
   {
     id: 4,
     name: '笔墨星河AI写作',
-    logo: 'https://q.qlogo.cn/headimg_dl?dst_uin=971995487&spec=640',
+    logo: '/images/partners/bmdocs.jpg',
     icon: IconCode,
     website: 'https://docs.cldery.com/bmdocs/',
   }

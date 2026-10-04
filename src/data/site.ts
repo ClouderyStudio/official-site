@@ -174,6 +174,16 @@ export const projects: Project[] = [
     category: '游戏服务',
   },
   {
+    id: 11,
+    title: 'SCForge 插件模组资源平台',
+    description:
+      '生存战争（SurvivalCraft）的插件与模组资源平台：插件是 .dll、模组是 .netmod，支持浏览与搜索、发布与先审后发、版本管理、评论与社区评价。',
+    tags: ['生存战争', '插件模组', '资源平台', '社区'],
+    icon: IconDeployedCode,
+    view: 'https://scforge.cldery.com',
+    category: '游戏服务',
+  },
+  {
     id: 3,
     title: '竹像素Minecraft服务器',
     description: '一个现代化、高版本、低延迟的周目制生存服务器。',

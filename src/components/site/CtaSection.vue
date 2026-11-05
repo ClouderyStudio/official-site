@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { contactEmail, ctaChannels, studioInfo } from '@/data/site'
-import { M3Button } from '@/components/m3'
+import { M3Button } from '@clderystd/m3-ui'
 import SectionHeading from './SectionHeading.vue'
 </script>
 

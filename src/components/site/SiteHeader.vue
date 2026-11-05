@@ -24,7 +24,7 @@ import {
   M3Switch,
   M3Tooltip,
   M3TopAppBar,
-} from '@/components/m3'
+} from '@clderystd/m3-ui'
 
 const sectionIds = navLinks.map((link) => link.href.replace('#', ''))
 

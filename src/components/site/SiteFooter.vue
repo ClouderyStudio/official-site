@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { contactEmail, footerColumns, heroLogo, socialLinks, studioInfo } from '@/data/site'
-import { M3Icon, M3IconButton } from '@/components/m3'
+import { M3Icon, M3IconButton } from '@clderystd/m3-ui'
 
 const year = new Date().getFullYear()
 </script>

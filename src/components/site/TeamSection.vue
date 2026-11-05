@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { teamMembers } from '@/data/site'
-import { M3Avatar, M3Card, M3IconButton } from '@/components/m3'
+import { M3Avatar, M3Card, M3IconButton } from '@clderystd/m3-ui'
 import SectionHeading from './SectionHeading.vue'
 </script>
 

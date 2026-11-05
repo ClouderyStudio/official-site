@@ -2,7 +2,7 @@
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { IconGithub, IconLock, IconVisibility } from '@/icons'
 import { projectTags, projects } from '@/data/site'
-import { M3Button, M3Card, M3Icon, M3SegmentedButton } from '@/components/m3'
+import { M3Button, M3Card, M3Icon, M3SegmentedButton } from '@clderystd/m3-ui'
 import SectionHeading from './SectionHeading.vue'
 
 const selectedTag = ref('全部')

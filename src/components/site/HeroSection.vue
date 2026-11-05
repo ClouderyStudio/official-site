@@ -3,7 +3,7 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { IconArrowForward, IconExpandMore, IconGithub } from '@/icons'
 import { useHitokoto } from '@/composables/useHitokoto'
 import { githubOrg, heroImage, heroLogo, studioInfo } from '@/data/site'
-import { M3Button, M3IconButton } from '@/components/m3'
+import { M3Button, M3IconButton } from '@clderystd/m3-ui'
 import ParticlesBackground from './ParticlesBackground.vue'
 
 const { quote, from } = useHitokoto()

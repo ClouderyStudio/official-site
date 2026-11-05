@@ -1,6 +1,6 @@
 # 云术工作室 · 官网
 
-Vue 3 + Vite 8 + TypeScript 单页官网，界面完全按 **Material Design 3** 规范实现：自研 M3 组件库 + 官方 M3 设计令牌，不依赖 Vuetify / mdui / Tailwind。
+Vue 3 + Vite 8 + TypeScript 单页官网，界面完全按 **Material Design 3** 规范实现：组件库 `@clderystd/m3-ui` + 官方 M3 设计令牌，不依赖 Vuetify / mdui / Tailwind。
 
 ## 技术栈
 
@@ -8,7 +8,7 @@ Vue 3 + Vite 8 + TypeScript 单页官网，界面完全按 **Material Design 3**
 | --- | --- |
 | 框架 | Vue 3.5 `<script setup>` + TypeScript（`vue-tsc -b` 构建期类型检查） |
 | 构建 | Vite 8 |
-| 设计系统 | 自研 M3 组件库，配色由 `@material/material-color-utilities` 以 HCT 生成 |
+| 设计系统 | `@clderystd/m3-ui` 组件库；配色由 `@material/material-color-utilities` 以 HCT 生成 |
 | 图标 | `unplugin-icons` 内联 SVG（Material Symbols + Simple Icons），构建期按需 tree-shaking |
 | 字体 | Roboto Flex 可变字体，`@fontsource-variable/roboto-flex` 自托管 |
 | 粒子背景 | Canvas 手写实现（无第三方库） |
@@ -43,7 +43,7 @@ pnpm shots      # 无头 Edge/Chrome 截图到 .review/（需本机安装浏览�
 
 ```
 src/
-  components/m3/     自研 M3 组件库（index.ts 为统一出口，同时导出 vRipple 指令）
+  components/site/   页面区块
   components/site/   页面区块：SiteHeader / HeroSection / ParticlesBackground / LineCursor /
                      SectionHeading / AboutSection / ServicesSection / TeamSection /
                      ProjectsSection / CtaSection / PartnersSection / SiteFooter
@@ -56,6 +56,12 @@ scripts/             配色生成、无头浏览器截图
 ```
 
 ## M3 组件库
+
+组件来自独立仓库 [m3-ui](https://github.com/ClouderyStudio/m3-ui)，以 `@clderystd/m3-ui` 发布在 npm：
+
+- 本仓库不再保有组件副本；改组件去 m3-ui 仓库改，升级用 `pnpm update @clderystd/m3-ui`
+- **配色留在本仓库**（`src/styles/m3-color-tokens.css`），组件库只带结构令牌
+- 样式入口 `src/styles/index.css` 先引入 `@clderystd/m3-ui/style.css`，再引入本站配色
 
 `M3Icon`、`M3Button`、`M3IconButton`、`M3Fab`、`M3Card`、`M3Chip`、`M3SegmentedButton`、
 `M3Divider`、`M3TopAppBar`、`M3Menu`、`M3MenuItem`、`M3Sheet`、`M3Dialog`、`M3List`、

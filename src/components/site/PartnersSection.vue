@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { IconArrowForward, IconHandshake } from '@/icons'
 import { contactEmail, partnerStats, partners } from '@/data/site'
-import { M3Card, M3Icon } from '@/components/m3'
+import { M3Card, M3Icon } from '@clderystd/m3-ui'
 import SectionHeading from './SectionHeading.vue'
 
 const failed = ref<Record<number, boolean>>({})

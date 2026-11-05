@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { IconCheck } from '@/icons'
 import { aboutIntro, capabilities, studioFacts, studioInfo } from '@/data/site'
-import { M3Card, M3Icon } from '@/components/m3'
+import { M3Card, M3Icon } from '@clderystd/m3-ui'
 import SectionHeading from './SectionHeading.vue'
 </script>
 

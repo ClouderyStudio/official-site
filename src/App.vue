@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { IconArrowUpward } from '@/icons'
 import { useScrolled } from '@/composables/useScrolled'
-import { M3Fab } from '@/components/m3'
+import { M3Fab } from '@clderystd/m3-ui'
 import SiteHeader from '@/components/site/SiteHeader.vue'
 import SiteFooter from '@/components/site/SiteFooter.vue'
 import HeroSection from '@/components/site/HeroSection.vue'

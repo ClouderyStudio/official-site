@@ -43,12 +43,11 @@ pnpm shots      # 无头 Edge/Chrome 截图到 .review/（需本机安装浏览�
 
 ```
 src/
-  components/site/   页面区块
   components/site/   页面区块：SiteHeader / HeroSection / ParticlesBackground / LineCursor /
                      SectionHeading / AboutSection / ServicesSection / TeamSection /
                      ProjectsSection / CtaSection / PartnersSection / SiteFooter
-  composables/       useTheme / useScrolled / useHitokoto / useModal
-  directives/        v-ripple、v-reveal（滚动揭示，支持 blur 变体）、v-count-up（数字滚动）
+  composables/       useTheme / useScrolled / useActiveSection / useHitokoto
+  directives/        v-count-up（数字滚动；v-ripple 与 v-reveal 来自组件库）
   data/site.ts       站点全部文案与数据结构
   icons.ts           图标中央注册表（命名导出 Icon*，类型 IconComponent）
   styles/            m3-color-tokens.css / m3-foundations.css / base.css / motion.css / index.css
@@ -60,6 +59,9 @@ scripts/             配色生成、无头浏览器截图
 组件来自独立仓库 [m3-ui](https://github.com/ClouderyStudio/m3-ui)，以 `@clderystd/m3-ui` 发布在 npm：
 
 - 本仓库不再保有组件副本；改组件去 m3-ui 仓库改，升级用 `pnpm update @clderystd/m3-ui`
+- **v-ripple / v-reveal 也从组件库引入**（此前本仓库有一份逐字节相同的副本）：
+  组件库里的组件自己会 import 这两个指令，`main.ts` 再全局注册一次，是为了让站点自己的元素也能用
+- 组件库有可交互的 Gallery：`cd ../m3-ui && pnpm dev`（http://localhost:5180）
 - **配色留在本仓库**（`src/styles/m3-color-tokens.css`），组件库只带结构令牌
 - 样式入口 `src/styles/index.css` 先引入 `@clderystd/m3-ui/style.css`，再引入本站配色
 

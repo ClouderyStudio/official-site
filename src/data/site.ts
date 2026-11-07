@@ -104,6 +104,16 @@ export const contactEmail = 'admin@cldery.com'
 export const githubOrg = 'https://github.com/ClouderyStudio'
 export const qqGroup = 'https://qm.qq.com/q/Fg3aqm6ccW'
 export const docSite = 'https://docs.cldery.com'
+/**
+ * 身份中心前端。
+ *
+ * 不要用 auth.cldery.com —— 那是 Casdoor 的旧入口，2026-11 起已不参与登录链路
+ * （访客去了只会看到一个和站点无关的 Casdoor 登录页）。真正的身份中心在这里：
+ * 登录页、授权确认页、账户面板与管理后台都在同一个前端。
+ */
+export const identityCenter = 'https://identity.cldery.com'
+/** m3-ui 组件库仓库（还没有独立站点，gallery 在仓库里 pnpm dev 起）。 */
+export const componentLibrary = 'https://github.com/ClouderyStudio/m3-ui'
 export const hitokotoEndpoint = 'https://v1.hitokoto.cn'
 export const hitokotoFallback = { hitokoto: '代码改变世界', from: '程序员' }
 
@@ -194,12 +204,25 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: '云术统一身份认证中心',
+    title: '云术身份中心',
     description:
-      '一个统一身份认证系统，提供单点登录、用户管理和权限控制，适用于各种Web应用和服务。',
-    tags: ['统一认证', '身份管理', '安全性', 'Web应用'],
+      '自建的统一身份认证系统：OAuth2 授权码 + 一次性授权码、口令与邮箱验证码登录、第三方账号绑定、分站职权与账号后台。一次登录，全部站点通用。',
+    tags: ['统一认证', '单点登录', '身份管理', '安全性'],
     icon: IconShield,
-    view: 'https://auth.cldery.com',
+    view: identityCenter,
+    link: 'https://github.com/ClouderyStudio/identity-ui',
+    category: 'Web应用',
+  },
+  {
+    id: 12,
+    title: '云术 M3 组件库',
+    description:
+      '按 Material Design 3 规范实现的 Vue 3 组件库：26 个组件 + 设计令牌，配色由使用方注入，因此官网的蓝、其他站点的橙可以共用同一份组件代码。附带可交互的组件 Gallery。',
+    tags: ['组件库', 'Material Design 3', 'Vue 3', '开源'],
+    icon: IconPalette,
+    // 组件库还没有独立的在线站点（gallery 只在仓库里 pnpm dev 起），所以只给源码入口，
+    // 不填 view —— 否则「查看」与「源码」两个按钮会指向同一个仓库地址。
+    link: componentLibrary,
     category: 'Web应用',
   },
   {
@@ -413,16 +436,22 @@ export const megaMenu: { title: string; columns: { category: string; items: Menu
       category: '开发',
       items: [
         {
-          name: '云术统一身份认证中心',
+          name: '云术身份中心',
           description: '单点登录与统一权限管理',
           icon: IconShield,
-          href: 'https://auth.cldery.com',
+          href: identityCenter,
         },
         {
           name: '辽阔域名',
           description: '免费二级域名与 DNS 解析',
           icon: IconDomain,
           href: 'https://lkdns.org',
+        },
+        {
+          name: 'M3 组件库',
+          description: 'Material Design 3 组件与设计令牌',
+          icon: IconPalette,
+          href: componentLibrary,
         },
         {
           name: '文档站',
@@ -513,7 +542,8 @@ export const footerColumns = [
     title: '产品',
     links: [
       { label: '辽阔域名', href: 'https://lkdns.org' },
-      { label: '统一身份认证中心', href: 'https://auth.cldery.com' },
+      { label: '云术身份中心', href: identityCenter },
+      { label: 'M3 组件库', href: componentLibrary },
       { label: '栖所', href: 'https://qisoul.cldery.com' },
       { label: '心灵驿站', href: 'https://pt.cldery.com' },
     ],
